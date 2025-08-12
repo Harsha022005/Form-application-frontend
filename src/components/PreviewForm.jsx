@@ -11,21 +11,20 @@ export default function PreviewForm() {
 
   // State to track comprehension question answers
   const [answers, setAnswers] = useState({});
-
-  useEffect(() => {
-    async function fetchForm() {
-      try {
-        const url = import.meta.env.VITE_REACT_APP_URL || process.env.REACT_APP_URL;
-        const res = await axios.get(`${url}/user/getpreview/${id}`);
-        setForm(res.data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
+useEffect(() => {
+  async function fetchForm() {
+    try {
+      const url = "https://form-application-backend.onrender.com"; 
+      const res = await axios.get(`${url}/user/getpreview/${id}`);
+      setForm(res.data);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
-    fetchForm();
-  }, [id]);
+  }
+  fetchForm();
+}, [id]);
 
   // Handle option selection
   const handleOptionChange = (compIdx, qIdx, optionIdx) => {
