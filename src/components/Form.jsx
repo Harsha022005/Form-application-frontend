@@ -241,9 +241,10 @@ const onDragEnd = (result, qIndex) => {
           </div>
         </nav>
 
-        <h1 className="text-4xl font-extrabold text-center mb-12 text-indigo-700 tracking-wide">
-          Create Your Google Form
-        </h1>
+       <h1 className="text-4xl font-extrabold font-sans text-center mb-12 text-indigo-700 tracking-wide">
+  Create Your Form
+</h1>
+
 
         <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto">
           {/* LEFT SIDE: FORM INPUTS */}
